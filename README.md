@@ -1,16 +1,21 @@
-# React + Vite
+# Ecohuerta React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**¿Cómo se aplica el flujo de datos unidireccional en este proyecto?**
 
-Currently, two official plugins are available:
+En el proyecto el componente principal es el que obviamente hara todo, pero ese componente principal tiene unos componentes menores, que los cuales no podran cambiar o modificar ningun dato solo lo que podran hacer es enviar mensajes al componente principal y lo que hace el es actualizarlo y enviarlo al componente inferior, siguiendo un mismo flujo. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**¿Qué papel cumple el estado (useState) en los diferentes componentes y cómo influye en el renderizado?**
 
-## React Compiler
+El papel que cumple el useState es que funciona como memoria del componente que guarda la informacion que va cambiando con el tiempo, lo que hace es que se renderiza sin actualizar la misma pagina, es decir solo el componente no toda la pagina en si.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**¿Por qué es importante separar la UI en componentes reutilizables y puros?**
 
-## Expanding the ESLint configuration
+Es importante ya que al crearlo se podra utilizar varias veces, asi se mantiene un mejor orden, ya si se quiere modificar el componente en vez de modificarlos en todos los lugares donde se puso, pues se modifica en el componente original.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**¿Qué ventajas aporta el uso de JSX declarativo frente al enfoque imperativo del DOM tradicional?**
+
+Las ventajas que se ven es que en el enfoque imperativo uno mismo debe crear el nodo y uno mismo tiene que actualizar el DOM, en cambio lo que hace JSX es que el mismo crea el nodo y el mismo actualiza el DOM, asi ahorrando tiempo 
+
+**¿Cómo podrías mejorar la app agregando tres componentes nuevos sin romper la coherencia del diseño ni la lógica?**
+
+se le puede agregar imagenes para ver de que trata la pagina y lo que se hace, tambien un header se puede agregar asi poniendo el nombre de la pagina y por ultimo un footer donde se le puede poner los contactos, los derechos de autor y si tienen redes sociales, tambien agrgarlas
